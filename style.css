@@ -1,0 +1,82 @@
+* {
+    
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+    
+} 
+.movies {
+ width: 80%;
+ background-color:  rgb(20, 192, 106);
+ margin:auto;
+ margin-top: 40px;
+ border-radius: 5px;
+ position: relative;
+ 
+}
+
+.movies > ul {
+    list-style: none;
+    display: flex;
+}
+
+.movies > ul > li {
+    width: 100px;
+}
+
+.movies > ul > li:first-child {
+    margin-left: 30px;
+}
+
+.movies > ul > li > a:hover {
+    color: #9b0a22;
+}
+.movies > ul > li > a {
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+}
+
+
+.movies > ul > li > a[active] {
+    background-color: #0a70cf;
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    top: -10px;
+    line-height: 70px;
+}
+
+.movies > ul > li > a[active]::after 
+{
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100px;
+    background-color: #085cac;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    transform: skew(-45deg);
+    z-index: -1;
+
+}
+
+.movies > ul > li > a[active]::before
+{
+   
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: #085cac;
+    position: absolute;
+    left: -5px;
+    transform: skew(45deg);
+    z-index: -1;
+
+}
